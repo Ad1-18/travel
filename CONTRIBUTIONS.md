@@ -1,0 +1,9 @@
+# Contributions:
+
+## Jonathan:
+- User Authentication
+
+## Citations:
+- MERN Tutorial (https://medium.com/@beaucarnes/learn-the-mern-stack-by-building-an-exercise-tracker-mern-tutorial-59c13c1237a1)
+- Authentication Tutorial (https://medium.com/swlh/user-authentication-using-mern-stack-part-1-backend-cd4d193f15b1)
+- Authentication Tutorail (https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669)
