@@ -7,7 +7,6 @@ const { createJWT } = require('../utils/auth');
 // Register
 exports.signup = (req, res, next) => {
   let { email, password, password_confirmation, firstName, lastName } = req.body;
-  console.log(req.body);
   // Validation
   let errors = [];
   // Presence Checks
