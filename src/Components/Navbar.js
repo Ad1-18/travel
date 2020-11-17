@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function Navbar() {
     const[searchItem, setSearchItem] = useState("");
     const handleChange= (e) => {
-        setSearchItem({...searchItem, [e.target.name]: e.target.value});
+        setSearchItem({...searchItem, [e.target.name]: e.target.value.trim()});
     }
     const handleSubmit = (e) => {
         e.preventDefault();
