@@ -35,9 +35,8 @@ const roomSchema = new Schema({
   bathroom: Boolean, // attached bathroom: 1 = yes, 0 = no
   wifi: Boolean,
   amenities: [String], // fridge, tv, iron boards, etc.
-  size: Number,
-  status: {
-    type: Boolean, // 1 = available, 0 = unavailable
+  available: {
+    type: Boolean, // true = available, false = unavailable
     required: true,
   }
 })
