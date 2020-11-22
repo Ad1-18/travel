@@ -9,10 +9,9 @@ const bookingSchema = new Schema({
     ref: Hotel
   },
   room:{
-    type: string,
-    ref: Hotel.rooms
+    type: String
   },
-  Dates: [Date],
+  dates: [Date],
 })
 
 const userSchema = new Schema({

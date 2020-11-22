@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
-const hotelRoutes = require('./routes/hotel')
+const hotelRoutes = require('./routes/hotel');
 const searchRoutes = require('./routes/search');
+const userRoutes = require('./routes/user')
+
 const { db } = require('./models/user.model');
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,11 +20,14 @@ app.use('/api', authRoutes);
 // POST: /api/signup to sign up with first name, last name, email, password and password confirmations
 app.use('/hotel', hotelRoutes)
 // GET: /hotel/browse to return all hotels
-// GET: /hotel/:id to return hotel with id = :id
+// GET: /hotel/:id to return all data for a given hotel
 // GET: /hotel/rooms/:id to return all room data for a given hotel
 // GET: /hotel/card/:id to return the name, city, description and minimum room price for a given hotel
 app.use('/search', searchRoutes);
 // GET: /search/:query to return the hotels with :query in their tags (can be substring)
+app.use('/user', userRoutes);
+// GET: /user/:id to return all data for a given user
+// GET: /user/booking/:id to return all booking information for a given user
 
 
 const uri = process.env.ATLAS_URI;
