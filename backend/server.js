@@ -30,6 +30,7 @@ app.use('/search', searchRoutes);
 app.use('/user', userRoutes);
 // GET: /user/:id to return all data for a given user
 // GET: /user/booking/:id to return all booking information for a given user
+// GET: /rec/:userId to get 3 recommendations for this user
 app.use('/booking', bookingRoutes);
 // POST: /booking/add to create new booking with userId, hotelId, rooom, dates (dates is an array, date format: YYYY-MM-DDT00:00:00.000+00:00)
 // POST: /booking/del to delete a booking with bookingId

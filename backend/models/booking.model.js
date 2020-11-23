@@ -11,12 +11,14 @@ const bookingSchema = new Schema({
   },
   hotelId: {
     type: Schema.Types.ObjectId,
-    ref: 'Hotel'
+    ref: Hotel
   },
   room: {
     type: String
   },
   dates: [Date]
+}, {
+  timestamps: true
 })
 
 const Booking = mongoose.model('Booking', bookingSchema)
