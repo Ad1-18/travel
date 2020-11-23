@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Booking = require('./booking.model');
 
 const Schema = mongoose.Schema;
 
@@ -19,7 +20,11 @@ const userSchema = new Schema({
   lastName: {
     type: String,
     required: true
-  }
+  },
+  bookings: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Booking'
+  }]
 }, {
     timestamps: true,
 }) ;
