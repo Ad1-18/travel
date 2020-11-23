@@ -1,0 +1,29 @@
+.banner {
+  background: url("https://i.pinimg.com/originals/82/67/ae/8267aed98b8a5029371ae3d1acf9cf47.jpg") center center;
+  height: 62.5vh;
+  position: relative;
+}
+
+.banner-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-search-button {
+  height: 45px;
+  background-color: #48bf91 !important; /*green*/
+  color: #132743 !important; /*blue*/
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+}
+
+.banner-text {
+  background-color: rgba(19, 39, 67, 0.69);
+  /*converted hex blue to rgba^*/
+  color: white;
+  padding-top: 22.5vh;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 450px;
+}
