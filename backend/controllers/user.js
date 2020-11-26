@@ -20,6 +20,9 @@ exports.bookings = (req, res) => {
 exports.reccomendations = (req, res) => {
   let { userId } = req.params;
   Booking.findOne({ userId: userId }).sort({'createdAt': -1}).exec( (err,booking) => {
+    if (!booking) {
+      res.status(200).json({ flag: "No bookings found" })
+    }
     if (err) {res.status(500).json({ error: err })}
     if (booking) {
       Hotel.findById( booking.hotelId, 'location.city' ).exec( (err, hotel ) => {
