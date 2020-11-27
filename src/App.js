@@ -9,6 +9,7 @@ import Home from './Home';
 import SearchResults from './SearchResults';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-oldschool-dark'
+import Hotel from './Hotel';
 
 function App()  {
   return (
@@ -30,6 +31,9 @@ function App()  {
             </Route>
             <Route path = "/search">
                 <SearchResults />
+            </Route>
+            <Route path="/hotel/:id" render={(props) => <Hotel {...props} />}>
+              {/* <Hotel id= /> */}
             </Route>
             <Route path = "/">
               <Navbar />
