@@ -25,7 +25,10 @@ app.use('/hotel', hotelRoutes)
 // GET: /hotel/:id to return all data for a given hotel
 // GET: /hotel/rooms/:id to return all room data for a given hotel
 // GET: /hotel/card/:id to return the name, city, description and minimum room price for a given hotel
-// GET: /bookings/:hotelId/:room to return bookings for a given room of a hotel
+// GET: /hotel/bookings/:hotelId/:room to return bookings for a given room of a hotel
+// GET: /hotel/rating/:hotelId to return ratings for given hotel
+// POST: /hotel/review/add to add a review with hotelId, userId, review and rating
+// POST: /hotel/review/del to delete a review with hotelId, userId
 app.use('/search', searchRoutes);
 // GET: /search/:query to return the hotels with :query in their tags (can be substring)
 app.use('/user', userRoutes);
