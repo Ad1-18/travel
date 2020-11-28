@@ -26,7 +26,7 @@ exports.reccomendations = (req, res) => {
     if (err) {res.status(500).json({ error: err })}
     if (booking) {
       Hotel.findById( booking.hotelId, 'location.city' ).exec( (err, hotel ) => {
-        Hotel.find({ 'location.city': hotel.location.city  }, 'name location.city desc rooms.price').sort('rooms.price').slice('rooms', 1).limit(3).exec( (err, hotels) => {
+        Hotel.find({ 'location.city': hotel.location.city  }, 'name location.city desc rooms.price image').sort('rooms.price').slice('rooms', 1).limit(3).exec( (err, hotels) => {
           res.json(hotels)
         })
       })
