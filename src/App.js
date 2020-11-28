@@ -10,12 +10,15 @@ import SearchResults from './SearchResults';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-oldschool-dark'
 import Hotel from './Hotel';
-
+const options = {
+  timeout: 2000,
+  transition: transitions.FADE
+}
 function App()  {
   return (
 
     <div className = "app">
-      <AlertProvider template={AlertTemplate}  >
+      <AlertProvider template={AlertTemplate} {...options} >
 
         <Router>
           <Switch>

@@ -1,12 +1,14 @@
 import React, {useState} from "react"
 import './Signup.css';
 import {Link} from "react-router-dom";
-import { useAlert } from 'react-alert'
+import { useAlert } from 'react-alert';
+import { useHistory } from "react-router-dom";
 
 function Signup() {
     const http = require('follow-redirects').http;
     const _ = require('lodash')
     const alert = useAlert();
+    const history = useHistory();
     const options = {
         'method': 'POST',
         'hostname': 'localhost',
@@ -33,6 +35,7 @@ function Signup() {
             }
             else{
                 alert.show("Signup Successful!")
+                history.push("/");
             }
         });
     });

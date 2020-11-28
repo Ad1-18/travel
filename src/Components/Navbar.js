@@ -1,11 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import {Link} from "react-router-dom";
 import { useStateValue } from "./StateProvider.js";
 
 function Navbar() {
-    const[{user},dispatch] = useStateValue();
+    const[{user,},dispatch] = useStateValue();
+    const http = require('follow-redirects').http;
     const[searchItem, setSearchItem] = useState("");
+    const[user_det, setUserDet] = useState("");
+    useEffect(()=>{
+        if (user!=null ){
+          const options = {
+            'hostname': 'localhost',
+            'port': 5000,
+            'path': '/user/' +user.id,
+            'headers': {
+                'Content-Type': 'application/json'
+              },
+            'maxRedirects': 20
+          };
+          http.get(options, function (res) {
+            const chunks = [];
+            console.log('statusCode:', res.statusCode);
+            res.on('data', function (chunk) {
+                chunks.push(chunk);
+                });
+    
+            res.on("end", function (chunk) {
+                const body = Buffer.concat(chunks);
+                const jsonbody = JSON.parse(body)
+                console.dir({jsonbody})
+                User_det(jsonbody);
+              });
+            });
+         };
+      },[]);
+    
+    const User_det = (jsonbody)=>{
+        // dispatch({
+        //     type: 'SET_USER_DET',
+        //     item:{
+        //         fName: jsonbody.firstName,
+        //         Lname: jsonbody.lastName
+        //     }
+        // })
+        setUserDet({...user_det, fName:jsonbody.firstName, lName:jsonbody.lastName} )
+    }
     const handleChange= (e) => {
         setSearchItem({...searchItem, [e.target.name]: e.target.value.trim()});
     }
@@ -26,6 +66,7 @@ function Navbar() {
                         <img className="navbar__logo" src ='./images/logo.png' alt=""/>
                     </div>
                 </Link>
+                {console.log("user IS>>",user)}
                 <div className="navbar__search">
                         <input className="search__bar" name="searchItem" type="text" placeholder="Search for Hotels" onChange={handleChange} autoComplete="true"></input>
                         <button type= "submit" onClick={handleSubmit} name="submit"><i className="search__icon fas fa-search-location"></i></button>
@@ -36,12 +77,12 @@ function Navbar() {
                             <strong>Bookings</strong>
                         </div>
                     </Link>
-                    <Link to={!user && "/login"}>
+                    <Link to={!user?"/login":"/"}>
                         <div className="buttons__login">
-                            <Link to = {user?"/user":"/login"}>
-                                <strong>Hello {user?.email}</strong>
+                            <Link to = {user?"/user/"+user.id:"/"}>
+                                <strong className="hello__user">Hello {user_det?.fName}</strong>
                             </Link>
-                                <strong onClick={logout}>{user ?'Sign Out':'Sign in'}</strong>
+                                <strong  className="sign__user" onClick={logout}>{user?'Sign Out':'Sign in'}</strong>
                             {/* <p style={{fontSize: "0.75rem"}}>Signup</p> */}
                         </div>
                     </Link>

@@ -48,6 +48,7 @@
 }
 .navbar__buttons{
     display: flex;
+    justify-content: space-evenly;
 }
 .buttons__login, .buttons__bookings, .buttons__about{
     font-family: 'Roboto', sans-serif;
@@ -56,4 +57,12 @@
     margin: 0px 5px;
     color: white;
     text-shadow: 1px 1px 5px black;
+}
+.hello__user{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.sign__user{
+    font-size: 1.25rem;
 }

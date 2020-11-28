@@ -1,4 +1,5 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import './Login.css';
 import {Link} from "react-router-dom";
 import { useAlert } from 'react-alert';
@@ -10,6 +11,7 @@ function Login() {
     const http = require('follow-redirects').http;
     const _ = require('lodash')
     const alert = useAlert();
+    const history = useHistory();
     const options = {
         'method': 'POST',
         'hostname': 'localhost',
@@ -33,14 +35,16 @@ function Login() {
         res.on("end", function () {
             const body = Buffer.concat(chunks);
             const bodyString = JSON.parse(body)
-            const userID = bodyString.message._id
+            console.log(bodyString)
+            const userID = bodyString.message?bodyString.message._id:null
             console.log(userID);
             if (res.statusCode!==200){
-                alert.show(_.lowerCase(bodyString))
+                alert.show(_.lowerCase(body.toString()))
             }
             else{
                 alert.show("You have been logged in!")
                 addUser(userID)
+                history.push("/")
             }
         });
     });

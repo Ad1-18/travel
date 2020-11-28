@@ -40,15 +40,15 @@ function Hotel(props) {
     <div className = 'hotel'>
       {console.dir({hotel})}
       <div className = 'hotel-info'>
-        <HotelResult img = "https://media.istockphoto.com/photos/hotel-room-suite-with-view-picture-id627892060?k=6&m=627892060&s=612x612&w=0&h=lVIi3QTDsZ1UDnMAjuy8ob9Zm6sBPCZ84x_e_OUl7Wk=" address = "72 Rue de Turbigo, 75003 Paris, France" name = "Hotel Lumière de la Seine" desc = "Close to Airport · Wifi · Pool" rating = {4.63} price = {15627}/>
+        <HotelResult img = {hotel.image} address = {hotel.location.street+", "+hotel.location.city+", "+hotel.location.state+" "+hotel.location.postcode} name = {hotel.name} desc = {hotel.desc} rating = {4.63} price = {hotel.rooms[0].price}/>
       </div>
 
     <div className = 'room'>
-      <Room name = "Single Room" desc = "1 guest · 1 bed · Wifi · Pool" price = {15627}/>
+      <Room name = {hotel.room[0].type+"Room"} desc = "1 guest · 1 bed · Wifi · Pool" price = {hotel.rooms[0].price}/>
 
-      <Room name = "Double Room" desc = "2 guest · 2 bed · Breakfast included · Wifi · Pool" price = {15998}/>
+      <Room name = {hotel.room[1].type+"Room"} desc = "2 guest · 2 bed · Breakfast included · Wifi · Pool" price = {hotel.rooms[1].price}/>
 
-      <Room name = "Suite" desc = "2 guest · 1 bed · Breakfast included · Wifi · Pool" price = {16427}/>
+      <Room name = {hotel.room[0].type} desc = "2 guest · 1 bed · Breakfast included · Wifi · Pool" price = {hotel.rooms[2].price}/>
     </div>
 
 
