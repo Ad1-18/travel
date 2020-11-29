@@ -4,6 +4,9 @@
   overflow: hidden;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
 }
+.room-info:hover{
+  background-color: #9ad3bc;
+}
 
 .room-info {
     background-color: rgba(72, 191, 145, 0.12); /*green*/
@@ -25,4 +28,10 @@
     font-weight: 300;
     margin-top: 8px;
     margin-bottom: 8px;
+  }
+  .selected{
+    background-color:#48c77d;
+  }
+  .selected:hover{
+    background-color :#48c77d;
   }
