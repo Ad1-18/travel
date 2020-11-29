@@ -67,7 +67,8 @@ const hotelSchema = new Schema({
     ref: 'Booking'
   }],
   image: String,
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  amenities:[String] // pool, spa, gym, etc.
 }, {
   timestamps: true,
 });
