@@ -55,14 +55,14 @@ function Hotel(props) {
       </div>
 
     <div className = 'room'>
-      <div  id={"a"} onClick = {()=>{console.log(id)}}>
-      <Room name = {_.capitalize(hotel.rooms[0].type)+" Room"} desc = {hotel.rooms[0].occupancy+ " guest · 1 bed · Wifi · Pool"} price = {hotel.rooms[0].price} id={"1"}/>
+      <div  id={"a"} onClick = {(e)=>{console.log(e.target.id||e.target.parentElement.id)}}>
+      <Room name = {_.capitalize(hotel.rooms[0].type)} desc = {hotel.rooms[0].occupancy+ " guest · 1 bed · Wifi · Pool"} price = {hotel.rooms[0].price} id={"1"}/>
       </div>
-      <div onClick = {(id)=>{console.log(id)}}>
-      <Room id={"b"} name = {_.capitalize(hotel.rooms[1].type)+" Room"} desc = {hotel.rooms[1].occupancy+ " guest · 2 bed · Breakfast included · Wifi · Pool" }price = {hotel.rooms[1].price} id={"2"}/>
+      <div onClick = {(e)=>{console.log(e.target.id||e.target.parentElement.id)}}>
+      <Room  name = {_.capitalize(hotel.rooms[1].type)} desc = {hotel.rooms[1].occupancy+ " guest · 2 bed · Breakfast included · Wifi · Pool" }price = {hotel.rooms[1].price} id={"2"}/>
       </div>
-      <div onClick = {(id)=>{console.log(id)}} >
-      <Room  id={"c"} name = {_.capitalize(hotel.rooms[2].type)} desc = {hotel.rooms[2].occupancy+ "guest · 1 bed · Breakfast included · Wifi · Pool"} price = {hotel.rooms[2].price} id={"3"}/>
+      <div onClick = {(e)=>{console.log(e.target.id||e.target.parentElement.id)}} >
+      <Room   name = {_.capitalize(hotel.rooms[2].type)} desc = {hotel.rooms[2].occupancy+ "guest · 1 bed · Breakfast included · Wifi · Pool"} price = {hotel.rooms[2].price} id={"3"}/>
     </div>
     </div>
 
