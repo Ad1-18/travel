@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './Hotel.css'
 import HotelResult from "./Components/HotelResult.js"
 import Room from "./Components/Room.js"
+import EnterReview from "./Components/EnterReview.js"
 
 function Hotel(props) {
   const id = props.match.params.id;
@@ -64,6 +65,11 @@ function Hotel(props) {
       <div onClick = {(id)=>{console.log(id)}} >
       <Room  id={"c"} name = {_.capitalize(hotel.rooms[2].type)} desc = {hotel.rooms[2].occupancy+ "guest · 1 bed · Breakfast included · Wifi · Pool"} price = {hotel.rooms[2].price} id={"3"}/>
     </div>
+
+    <div>
+    <EnterReview />
+    </div>
+    
     </div>
 
 

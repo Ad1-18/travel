@@ -11,7 +11,7 @@ function Home() {
   const [recomm, setRecomm] = useState('');
   useEffect(()=>{
     if (user!=null ){
-      
+
       console.log("USER IS>>>",user)
       const options = {
         'hostname': 'localhost',
@@ -47,8 +47,9 @@ function Home() {
     return (
       <div className = 'home'>
       <Banner />
-      <p>Loading</p>
+      <p>No recommendations yet!</p>
     </div>
+
     )
   }
   return  (
