@@ -62,7 +62,7 @@ function Hotel(props) {
     <div className = 'hotel'>
       {console.dir({hotel})}
       <div className = 'hotel-info'>
-        <HotelResult id={room} img = {hotel.image} address = {hotel.location.street+", "+hotel.location.city+", "+hotel.location.state+" "+hotel.location.postcode} name = {hotel.name} desc = {hotel.desc} rating = {4.63} price = {roomPrice}/>
+        <HotelResult id={room} img = {hotel.image} address = {hotel.location.street+", "+hotel.location.city+", "+hotel.location.state+" "+hotel.location.postcode} name = {hotel.name} desc = {hotel.desc} rating = {4.63} price = {roomPrice||hotel.rooms[0].price}/>
       </div>
 
     <div className = 'room'>
@@ -77,6 +77,7 @@ function Hotel(props) {
       </div>
     </div>
     <div className= 'room'>
+    <h3 className="review__heading">Reviews-</h3>
         {hotel.reviews.map(el => (
             <Review
             hotel={el}
