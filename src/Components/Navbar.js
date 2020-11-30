@@ -34,6 +34,11 @@ function Navbar() {
             });
          };
       },[]);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 33cf578963b0555bc653ae10c992c8de00cc0b8e
     const User_det = (jsonbody)=>{
         setUserDet({...user_det, fName:jsonbody.firstName, lName:jsonbody.lastName} )
     }

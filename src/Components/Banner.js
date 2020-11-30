@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import './Banner.css'
 import DatePicker from "./DatePicker.js"
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
 
 function Banner() {
-  const history = useHistory();
+  //const history = useHistory();
   const [showsearch, setshowsearch] = useState (false);
 
   return  (
     <div className = 'banner'>
 
-      <div className = 'banner-search'>
+      {/* <div className = 'banner-search'>
         {showsearch && <DatePicker />}
-
         <Button onClick={() => setshowsearch(!showsearch)} className = 'banner-search-button' variant = 'outlined'> {showsearch ? <h4> <strong> Close </strong> </h4> : <h4> <strong> Search Dates </strong> </h4>} </Button>
-      </div>
+      </div> */}
 
       <div className = 'banner-text'>
         <h1>Relaxation that lightens your mind, not your wallet.</h1>
