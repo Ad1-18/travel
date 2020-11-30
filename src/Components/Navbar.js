@@ -37,13 +37,6 @@ function Navbar() {
       },[]);
     
     const User_det = (jsonbody)=>{
-        // dispatch({
-        //     type: 'SET_USER_DET',
-        //     item:{
-        //         fName: jsonbody.firstName,
-        //         Lname: jsonbody.lastName
-        //     }
-        // })
         setUserDet({...user_det, fName:jsonbody.firstName, lName:jsonbody.lastName} )
     }
     const handleChange= (e) => {
@@ -98,3 +91,4 @@ function Navbar() {
 }
 
 export default Navbar
+

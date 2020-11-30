@@ -64,3 +64,7 @@
     /*background-color: #132743; /*blue*/
     color: #48bf91; /*green*/
 }
+.datepicker{
+  position: absolute;
+  left: 1025px;
+}

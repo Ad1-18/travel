@@ -5,7 +5,6 @@
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   padding: 20px;
-  padding-top: 20px;
   border: 1;
 }
 
@@ -19,4 +18,31 @@
 
 .review > input:focus {
     outline-width: 0;
+}
+.review__text{
+  margin-top: 10px;
+  margin-left: -5px;
+  width: 95vw;
+  height: 35vh;
+  border:none;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  background-color: #fbf7f0;
+}
+.review__text:focus{
+  outline: none;
+}
+.review__post{
+  margin-top: 10px;
+}
+.review__post:focus{
+  outline: none;
+}
+#rev{
+  background-color:  #48bf91;
+}
+.chars__left{
+  margin-top: 10px;
+  text-align: end;
 }

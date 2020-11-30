@@ -10,12 +10,3 @@
 .searchresults-info > h1 {
   margin-bottom: 30px;
   }
-  .room__select:hover{
-    background-color:#48c77d ;
-  }
-  .selected{
-    background-color:red;
-  }
-  .selected:hover{
-    background-color: red;
-  }

@@ -51,7 +51,6 @@
     justify-content: space-evenly;
 }
 .buttons__login, .buttons__bookings, .buttons__about{
-    font-family: 'Roboto', sans-serif;
     font-size: 1.7rem;
     font-weight: 900;
     margin: 0px 5px;
