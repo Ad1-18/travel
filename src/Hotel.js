@@ -4,6 +4,7 @@ import HotelResult from "./Components/HotelResult.js"
 import Room from "./Components/Room.js"
 import EnterReview from "./Components/EnterReview.js"
 import Review from "./Components/Review.js"
+import Navbar from "./Components/Navbar.js"
 
 
 function Hotel(props) {
@@ -53,11 +54,11 @@ function Hotel(props) {
       if (e.target.id!==room && e.target.parentElement.id!==room){
         const roomID = e.target.id||e.target.parentElement.id
         setRoom(roomID)
-        setRoomPrice(hotel.rooms[roomID].price)
+        setRoomPrice(array[roomID].price)
       }
       else{
         setRoom("None")
-        setRoomPrice(hotel.rooms[0].price)
+        setRoomPrice(array[0].price)
       }
     }
     let c = 0
@@ -73,6 +74,7 @@ function Hotel(props) {
   return  (
     <div className = 'hotel'>
       {console.dir({hotel})}
+      <Navbar />
       <div className = 'hotel-info'>
         <HotelResult hotelid={hotel._id} id={array[room]?.number||array[room]} img = {hotel.image} address = {hotel.location.street+", "+hotel.location.city+", "+hotel.location.state+" "+hotel.location.postcode} name = {hotel.name} desc = {hotel.desc} rating = {avgReview} price = {roomPrice||hotel.rooms[0].price}/>
       </div>
