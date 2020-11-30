@@ -3,7 +3,7 @@ import './SearchResults.css';
 import {Link} from "react-router-dom";
 //SearchResult.js not the same as SearchResults.js
 import SearchResult from "./Components/SearchResult.js"
-import { isEmpty } from 'lodash';
+import Navbar from "./Components/Navbar.js"
 
 
 function SearchResults(props)  {
@@ -42,6 +42,8 @@ function SearchResults(props)  {
  console.log("helllo>>",query)
   if (searchHotel.length==0){
     return(
+      <div>
+      <Navbar />
       <div className = 'searchresults'>
 
       <div className = 'searchresults-info'>
@@ -49,25 +51,28 @@ function SearchResults(props)  {
       </div>
       <h1>Oops, we couldn't find any match for that!</h1>
       </div>
+      </div>
     )
   }
   else{
   return (
+    <div>
+      <Navbar />
     <div className = 'searchresults'>
-
       <div className = 'searchresults-info'>
         <h1>Search Results</h1>
       </div>
       {searchHotel.map(el => (
       <Link to={"/hotel/"+el._id}>
       <SearchResult 
-      img = "" 
+        img = {el.image} 
         address = {el.location.city}
         name = {el.name} 
         desc = {el.desc} 
        price = {el.rooms[0].price}/></Link>)
       )}
 
+    </div>
     </div>
   )}
 }

@@ -4,9 +4,20 @@
 
 .searchresults-info > p {
   margin-bottom: 10px;
-  font-size: 14px;;
+  font-size: 14px;
   }
 
 .searchresults-info > h1 {
   margin-bottom: 30px;
   }
+/* .logo{
+  width: 60px;
+  height: auto;
+  display: inline-block;
+  margin-left: 3%;
+}
+.search__logo {
+  width: 60px;
+  height: auto;
+  background-color:white;
+} */

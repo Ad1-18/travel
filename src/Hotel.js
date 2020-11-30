@@ -93,21 +93,11 @@ function Hotel(props) {
       </div>
     </div>
     <div className= 'room'>
-<<<<<<< HEAD
-=======
-
-    <h3 className="review__heading">Reviews-</h3>
-
->>>>>>> 33cf578963b0555bc653ae10c992c8de00cc0b8e
 
     <div className = 'heading'>
       Reviews
     </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 33cf578963b0555bc653ae10c992c8de00cc0b8e
         {hotel.reviews.map(el => (
             <Review
             hotel1={el}

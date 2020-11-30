@@ -12,7 +12,7 @@ function SearchResult(
   return (
     <div className = 'searchresult'>
 
-      <img src = {img} alt = "" onClick = {() => history.push('/hotel')}/>
+      <img src = {img} alt = ""/>
 
       <div className = 'searchresult-info'>
 
@@ -24,11 +24,6 @@ function SearchResult(
           </div>
 
           <div className = 'info-bottom'>
-
-            <div className = 'searchresult-rating'>
-              <StarIcon className = 'searchresult-star' />
-              <p><strong>{rating}</strong></p>
-            </div>
 
             <div className = 'searchresult-price'>
               <h2>₹{price}/night</h2>

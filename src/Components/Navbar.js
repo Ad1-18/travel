@@ -34,11 +34,6 @@ function Navbar() {
             });
          };
       },[]);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 33cf578963b0555bc653ae10c992c8de00cc0b8e
     const User_det = (jsonbody)=>{
         setUserDet({...user_det, fName:jsonbody.firstName, lName:jsonbody.lastName} )
     }
@@ -55,7 +50,7 @@ function Navbar() {
             <div className = "navbar" >
                 <Link to="/">
                     <div className = "logo">
-                        <img className="navbar__logo" src ='./images/logo.png' alt=""/>
+                        <img className="navbar__logo" src ='/images/logo.png' alt=""/>
                     </div>
                 </Link>
                 {console.log("user IS>>",user)}
