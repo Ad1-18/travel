@@ -56,6 +56,7 @@
     margin: 0px 5px;
     color: white; /* blue = #132743 */
     text-shadow: 1px 1px 5px black;
+    text-align: center;
 }
 .hello__user {
     text-decoration: none;
