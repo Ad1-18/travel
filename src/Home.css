@@ -13,10 +13,22 @@ body {
   padding-left: 46px;
   padding-bottom: 0px;
   font-size: 30px;
+  text-align: center;
+  margin-top: 3.5%;
 }
 
 /*cards*/
 .home-cards {
   display: flex;
   padding: 30px;
+}
+.home{
+  height: 100%;
+  color: white;
+  width: 100%;
+  background-image: linear-gradient(to top, #290001, white);
+}
+body{
+  height: 100%;
+  background-color: #290001;
 }

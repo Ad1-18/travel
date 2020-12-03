@@ -4,7 +4,6 @@ import {useHistory} from "react-router-dom";
 import React, {useState} from "react";
 import {useStateValue} from "./StateProvider.js";
 import { useAlert } from 'react-alert';
-import Review from './Review.js';
 function EnterReview({hotel}) {
 
   const hotelID = hotel._id;
