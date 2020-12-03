@@ -3,7 +3,6 @@ import './SearchResults.css';
 import {Link} from "react-router-dom";
 //SearchResult.js not the same as SearchResults.js
 import SearchResult from "./Components/SearchResult.js"
-import Navbar from "./Components/Navbar.js"
 
 
 function SearchResults(props)  {
@@ -43,7 +42,6 @@ function SearchResults(props)  {
   if (searchHotel.length==0){
     return(
       <div>
-      <Navbar />
       <div className = 'searchresults'>
 
       <div className = 'searchresults-info'>
@@ -57,7 +55,6 @@ function SearchResults(props)  {
   else{
   return (
     <div>
-      <Navbar />
     <div className = 'searchresults'>
       <div className = 'searchresults-info'>
         <h1>Search Results</h1>
